@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bauunternehmung Josef Geldermann &amp; Sohn GmbH – Massivbau &amp; Schlüsselfertigbau in Raesfeld</title>
+<meta name="description" content="Bauunternehmung Josef Geldermann &amp; Sohn GmbH aus Raesfeld: Schlüsselfertigbau, Wohnungs- und Mietwohnungsbau, Gewerbe- und Industriebau, Umbau, Abbruch- und Erdarbeiten. Über 25 eigene Mitarbeiter, eigene Maurermeister, eigener Maschinenpark.">
+<meta name="theme-color" content="#EFEFEC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --kalk:#EFEFEC;         /* Seitenhintergrund, kühles Kalksteingrau */
+  --papier:#F7F7F5;       /* helle Flächen */
+  --weiss:#FFFFFF;
+  --schiefer:#1E2427;     /* dunkle Bänder & Fließtext-Schwarz */
+  --schiefer-2:#283034;   /* Aufhellung im Dunkelband */
+  --beton:#6B7073;        /* Sekundärtext */
+  --beton-hell:#9DA2A4;
+  --ziegel:#8A3A2C;       /* Akzent, nur in Interaktions- und Aktivzuständen */
+  --linie:rgba(30,36,39,.14);
+  --linie-dunkel:rgba(255,255,255,.14);
+
+  --mass:1180px;
+  --pad:clamp(20px,5vw,64px);
+  --head-h:76px;
+
+  --t-xxl:clamp(2.6rem,6.2vw,5.1rem);
+  --t-xl:clamp(2rem,4vw,3.3rem);
+  --t-l:clamp(1.5rem,2.4vw,2.1rem);
+  --t-m:clamp(1.1rem,1.5vw,1.32rem);
+  --t-s:1rem;
+  --t-xs:.875rem;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--kalk);
+  color:var(--schiefer);
+  font-family:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.028em;line-height:1.06}
+p{margin:0}
+button{font:inherit;color:inherit}
+
+.wrap{max-width:var(--mass);margin:0 auto;padding-inline:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+section[id]{scroll-margin-top:calc(var(--head-h) + 12px)}
+
+:focus-visible{outline:2px solid var(--ziegel);outline-offset:3px}
+
+/* Bild-Ausfallsicherung: nie ein kaputtes Bild zeigen */
+.ph{position:relative;overflow:hidden;background:
+  linear-gradient(155deg,#dedeD9 0%,#cfcfca 45%,#d9d9d4 100%);}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.ph img.failed{opacity:0}
+
+/* ============================================================
+   KOPFZEILE
+   ============================================================ */
+.head{
+  position:fixed;inset:0 0 auto 0;z-index:60;height:var(--head-h);
+  background:var(--kalk);border-bottom:1px solid var(--linie);
+  display:flex;align-items:center;
+}
+.head .wrap{display:flex;align-items:center;gap:28px;width:100%}
+.brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
+.brand img{height:40px;width:auto;max-width:240px;object-fit:contain;object-position:left center}
+.brand .fallback{font-weight:700;font-size:1.05rem;letter-spacing:-.03em;line-height:1.1}
+.brand .fallback span{display:block;font-weight:500;font-size:.72rem;color:var(--beton);letter-spacing:.01em}
+
+.nav{display:flex;align-items:center;gap:26px;margin-left:auto}
+.nav a{
+  text-decoration:none;font-size:.94rem;font-weight:500;color:var(--schiefer);
+  padding-block:6px;position:relative;
+}
+.nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;
+  background:var(--ziegel);transform:scaleX(0);transform-origin:left;
+  transition:transform .28s ease;
+}
+.nav a:hover::after{transform:scaleX(1)}
+
+.head-tel{font-size:.94rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.head-tel:hover{color:var(--ziegel)}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 24px;border:1px solid var(--schiefer);background:var(--schiefer);
+  color:var(--kalk);text-decoration:none;font-weight:600;font-size:.95rem;
+  letter-spacing:-.01em;cursor:pointer;transition:background .25s ease,border-color .25s ease,color .25s ease;
+}
+.btn:hover{background:var(--ziegel);border-color:var(--ziegel);color:#fff}
+.btn.ghost{background:transparent;color:var(--schiefer)}
+.btn.ghost:hover{background:var(--schiefer);border-color:var(--schiefer);color:var(--kalk)}
+.btn.light{background:var(--kalk);border-color:var(--kalk);color:var(--schiefer)}
+.btn.light:hover{background:var(--ziegel);border-color:var(--ziegel);color:#fff}
+.btn.ghost-light{background:transparent;border-color:rgba(255,255,255,.4);color:#fff}
+.btn.ghost-light:hover{background:#fff;border-color:#fff;color:var(--schiefer)}
+.btn.sm{padding:11px 19px;font-size:.9rem}
+
+.burger{
+  display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--linie);
+  background:transparent;cursor:pointer;position:relative;
+}
+.burger i{position:absolute;left:12px;right:12px;height:1.6px;background:var(--schiefer);transition:transform .3s,opacity .2s}
+.burger i:nth-child(1){top:16px}
+.burger i:nth-child(2){top:21.5px}
+.burger i:nth-child(3){top:27px}
+body.menu-open .burger i:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+body.menu-open .burger i:nth-child(2){opacity:0}
+body.menu-open .burger i:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+.mob{
+  position:fixed;inset:var(--head-h) 0 0 0;z-index:55;background:var(--kalk);
+  padding:32px var(--pad) 40px;display:flex;flex-direction:column;gap:4px;
+  transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;
+  overflow-y:auto;
+}
+body.menu-open .mob{opacity:1;transform:none;pointer-events:auto}
+.mob a{
+  text-decoration:none;font-size:1.5rem;font-weight:600;letter-spacing:-.03em;
+  padding:14px 0;border-bottom:1px solid var(--linie);
+}
+.mob .btn{margin-top:24px}
+.mob .mob-meta{margin-top:24px;color:var(--beton);font-size:.95rem;line-height:1.8}
+.mob .mob-meta a{font-size:.95rem;font-weight:600;padding:0;border:0;display:inline}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding-top:var(--head-h);background:var(--kalk)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);min-height:calc(100vh - var(--head-h));min-height:calc(100svh - var(--head-h))}
+.hero-text{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(48px,7vw,88px) clamp(24px,4vw,56px) clamp(48px,7vw,72px) var(--pad);
+  max-width:760px;margin-left:auto;width:100%;
+}
+.hero-place{
+  font-size:.88rem;font-weight:600;color:var(--beton);margin-bottom:22px;
+  display:flex;align-items:center;gap:11px;
+}
+.hero-place::before{content:"";width:26px;height:1.5px;background:var(--ziegel);flex:0 0 auto}
+.hero h1{font-size:var(--t-xxl);max-width:14ch}
+.hero .lede{margin-top:26px;font-size:var(--t-m);color:#41484B;max-width:46ch;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.hero-media{position:relative;background:#d5d5d0}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-cap{
+  position:absolute;left:0;bottom:0;background:var(--kalk);color:var(--schiefer);
+  padding:16px 24px 14px;max-width:min(86%,420px);font-size:.86rem;line-height:1.45;
+}
+.hero-cap b{display:block;font-size:.95rem;letter-spacing:-.02em}
+.hero-cap span{color:var(--beton)}
+
+/* Fakten-Leiste */
+.facts{border-top:1px solid var(--linie);background:var(--kalk)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:30px 30px 34px;border-right:1px solid var(--linie)}
+.fact:first-child{padding-left:0}
+.fact:last-child{border-right:0;padding-right:0}
+.fact b{display:block;font-size:1.02rem;font-weight:700;letter-spacing:-.025em;margin-bottom:5px}
+.fact span{color:var(--beton);font-size:.9rem;line-height:1.5;display:block}
+
+/* ============================================================
+   ABSCHNITTE ALLGEMEIN
+   ============================================================ */
+.sec{padding-block:clamp(72px,9vw,132px)}
+.sec-dark{background:var(--schiefer);color:var(--kalk)}
+.sec-head{max-width:660px;margin-bottom:clamp(44px,5vw,68px)}
+.sec-head h2{font-size:var(--t-xl)}
+.sec-head p{margin-top:20px;color:var(--beton);font-size:var(--t-m);line-height:1.6}
+.sec-dark .sec-head p{color:var(--beton-hell)}
+
+.rule{height:1px;background:var(--linie);border:0;margin:0}
+
+/* ============================================================
+   LEISTUNGEN
+   ============================================================ */
+.svc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:center;padding-block:clamp(34px,4vw,52px)}
+.svc + .svc{border-top:1px solid var(--linie)}
+.svc.flip .svc-body{order:-1}
+.svc-media{aspect-ratio:4/3}
+.svc-body h3{font-size:var(--t-l);margin-bottom:16px}
+.svc-body p{color:#41484B;max-width:44ch}
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{
+  border:1px solid var(--linie);padding:6px 13px;font-size:.83rem;font-weight:500;
+  color:var(--beton);background:var(--papier);
+}
+.svc-more{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.6vw,36px);margin-top:clamp(44px,5vw,64px);border-top:1px solid var(--linie);padding-top:clamp(36px,4vw,52px)}
+.svc-mini h4{font-size:1.18rem;margin-bottom:11px;letter-spacing:-.025em}
+.svc-mini p{color:var(--beton);font-size:.95rem;line-height:1.6}
+.svc-mini .ph{aspect-ratio:16/10;margin-bottom:18px}
+
+/* ============================================================
+   WARUM
+   ============================================================ */
+.why-grid{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:clamp(32px,5vw,72px);align-items:start}
+.why-media{aspect-ratio:3/4;position:sticky;top:calc(var(--head-h) + 32px)}
+.why-list{display:grid;gap:0}
+.why-item{padding-block:26px;border-bottom:1px solid var(--linie-dunkel)}
+.why-item:first-child{padding-top:0}
+.why-item:last-child{border-bottom:0}
+.why-item h3{font-size:1.3rem;letter-spacing:-.03em;margin-bottom:10px}
+.why-item p{color:var(--beton-hell);max-width:52ch;font-size:1rem}
+
+/* ============================================================
+   STATEMENT
+   ============================================================ */
+.statement{position:relative;min-height:clamp(420px,62vh,640px);display:flex;align-items:flex-end;background:#2a3033;overflow:hidden}
+.statement img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05)}
+.statement::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(18,23,25,.88) 0%,rgba(18,23,25,.45) 45%,rgba(18,23,25,.12) 100%);
+}
+.statement .wrap{position:relative;z-index:2;padding-block:clamp(44px,6vw,76px);width:100%}
+.statement blockquote{margin:0;color:#fff;font-size:clamp(1.7rem,3.6vw,3rem);font-weight:700;letter-spacing:-.035em;line-height:1.1;max-width:20ch}
+.statement cite{display:block;margin-top:22px;font-style:normal;color:rgba(255,255,255,.72);font-size:.95rem;max-width:44ch;line-height:1.6}
+
+/* ============================================================
+   REFERENZEN
+   ============================================================ */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.filter{
+  border:1px solid var(--linie);background:transparent;padding:9px 17px;
+  font-size:.9rem;font-weight:500;cursor:pointer;transition:all .22s ease;
+}
+.filter:hover{border-color:var(--schiefer)}
+.filter[aria-pressed="true"]{background:var(--schiefer);border-color:var(--schiefer);color:var(--kalk)}
+
+/* Leitprojekt über der Galerie */
+.lead-proj{position:relative;margin-bottom:clamp(14px,1.8vw,22px);background:#d5d5d0;cursor:zoom-in}
+.lead-proj .ph{aspect-ratio:21/9}
+.lead-proj figcaption{
+  position:absolute;inset:auto 0 0 0;padding:60px 24px 20px;color:#fff;
+  background:linear-gradient(to top,rgba(18,23,25,.86),rgba(18,23,25,0));
+}
+.lead-proj figcaption b{display:block;font-size:clamp(1.05rem,1.7vw,1.35rem);letter-spacing:-.028em}
+.lead-proj figcaption span{color:rgba(255,255,255,.8);font-size:.92rem}
+
+/* Masonry: jedes Bild behält sein eigenes Format */
+.gal{columns:3;column-gap:clamp(10px,1.4vw,18px)}
+.gal figure{
+  margin:0 0 clamp(10px,1.4vw,18px);break-inside:avoid;-webkit-column-break-inside:avoid;
+  position:relative;cursor:zoom-in;background:#d5d5d0;display:block;
+}
+.gal .ph{width:100%}
+.gal .ph img{position:static;width:100%;height:auto;object-fit:initial;display:block}
+.gal figcaption{
+  position:absolute;inset:auto 0 0 0;padding:44px 16px 14px;color:#fff;font-size:.86rem;line-height:1.4;
+  background:linear-gradient(to top,rgba(18,23,25,.88),rgba(18,23,25,0));
+  opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .3s ease;
+}
+.gal figure:hover figcaption,.gal figure:focus-within figcaption{opacity:1;transform:none}
+.gal figure:hover .ph img{transform:scale(1.03)}
+.gal figure[hidden]{display:none}
+.gal figcaption b{display:block;font-weight:600;letter-spacing:-.02em;font-size:.96rem}
+.gal figcaption span{color:rgba(255,255,255,.78)}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(16,20,22,.94);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px)}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:82vh;object-fit:contain}
+.lb-cap{position:absolute;left:0;right:0;bottom:clamp(16px,3vw,32px);text-align:center;color:rgba(255,255,255,.82);font-size:.92rem;padding-inline:24px}
+.lb-x{position:absolute;top:clamp(12px,2vw,24px);right:clamp(12px,2vw,24px);width:46px;height:46px;border:1px solid rgba(255,255,255,.32);background:transparent;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1}
+.lb-x:hover{background:#fff;color:var(--schiefer)}
+
+/* ============================================================
+   ABLAUF
+   ============================================================ */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--linie)}
+.step{padding:34px 26px 8px;border-right:1px solid var(--linie)}
+.step:first-child{padding-left:0}
+.step:last-child{border-right:0;padding-right:0}
+.step .num{font-size:.82rem;font-weight:700;color:var(--ziegel);margin-bottom:14px;display:block}
+.step h3{font-size:1.16rem;letter-spacing:-.028em;margin-bottom:9px}
+.step p{color:var(--beton);font-size:.95rem;line-height:1.58}
+
+/* ============================================================
+   VERMIETUNG
+   ============================================================ */
+.rent{background:var(--papier);border-block:1px solid var(--linie)}
+.rent-top{display:grid;grid-template-columns:minmax(0,47fr) minmax(0,53fr);gap:clamp(30px,4.5vw,64px);align-items:center}
+.rent-badge{display:inline-flex;align-items:center;gap:12px;background:var(--weiss);border:1px solid var(--linie);padding:9px 15px;margin-bottom:24px}
+.rent-badge img{height:26px;width:auto}
+.rent-badge span{font-size:.85rem;font-weight:600;color:var(--beton);letter-spacing:-.01em}
+.rent-top h2{font-size:var(--t-xl);max-width:15ch}
+.rent-top .lede{margin-top:22px;color:#41484B;font-size:var(--t-m);max-width:48ch;line-height:1.58}
+.rent-media{aspect-ratio:5/4}
+.rent-specs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--linie);margin-top:clamp(40px,5vw,64px)}
+.rent-specs div{padding:26px 24px 0;border-right:1px solid var(--linie)}
+.rent-specs div:first-child{padding-left:0}
+.rent-specs div:last-child{border-right:0;padding-right:0}
+.rent-specs b{display:block;font-size:1.4rem;letter-spacing:-.035em;margin-bottom:4px}
+.rent-specs span{color:var(--beton);font-size:.9rem;line-height:1.5;display:block}
+
+.houses{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px);margin-top:clamp(40px,5vw,60px)}
+.house{background:var(--weiss);border:1px solid var(--linie);padding:24px 22px 22px;display:flex;flex-direction:column}
+.house h4{font-size:1.14rem;letter-spacing:-.03em;margin-bottom:6px}
+.house .addr{color:var(--beton);font-size:.88rem;margin-bottom:18px}
+.house .units{font-size:2.1rem;font-weight:700;letter-spacing:-.04em;line-height:1}
+.house .units small{font-size:.85rem;font-weight:500;color:var(--beton);letter-spacing:0;display:block;margin-top:5px}
+.house .status{margin-top:18px;padding-top:14px;border-top:1px solid var(--linie);font-size:.85rem;line-height:1.5;color:var(--beton)}
+.house .status.free{color:var(--ziegel);font-weight:600}
+.rent-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:clamp(34px,4vw,48px);padding-top:clamp(28px,3vw,36px);border-top:1px solid var(--linie)}
+.rent-cta p{color:var(--beton);font-size:.95rem;max-width:40ch;margin-right:auto}
+.rent-cta p b{color:var(--schiefer)}
+
+/* ============================================================
+   KONTAKT
+   ============================================================ */
+.contact-grid{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:clamp(36px,5vw,80px);align-items:start}
+.contact-grid h2{font-size:var(--t-xl);max-width:13ch}
+.contact-grid .lede{margin-top:22px;color:var(--beton-hell);font-size:var(--t-m);max-width:40ch;line-height:1.58}
+.locs{margin-top:38px;display:grid;gap:0}
+.loc{padding-block:22px;border-top:1px solid var(--linie-dunkel)}
+.loc:last-child{border-bottom:1px solid var(--linie-dunkel)}
+.loc b{display:block;font-size:1.02rem;letter-spacing:-.02em;margin-bottom:5px}
+.loc p{color:var(--beton-hell);font-size:.95rem;line-height:1.6}
+.loc a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.loc a:hover{border-color:#fff}
+
+.form{background:var(--schiefer-2);padding:clamp(26px,3.4vw,42px)}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.86rem;font-weight:500;color:var(--beton-hell);margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;background:transparent;border:1px solid var(--linie-dunkel);color:#fff;
+  padding:12px 14px;font:inherit;font-size:.98rem;border-radius:0;
+}
+.field textarea{min-height:118px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#fff;outline:none}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#fff 50%),linear-gradient(135deg,#fff 50%,transparent 50%);background-position:calc(100% - 18px) 22px,calc(100% - 13px) 22px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.field select option{color:var(--schiefer)}
+.form .fine{color:var(--beton-hell);font-size:.82rem;line-height:1.5;margin-top:14px}
+.form-note{margin-top:16px;font-size:.9rem;color:#fff;display:none}
+.form-note.on{display:block}
+
+/* ============================================================
+   FUSSZEILE
+   ============================================================ */
+.foot{background:var(--schiefer);color:var(--beton-hell);padding-block:clamp(44px,5vw,64px) 30px;border-top:1px solid var(--linie-dunkel)}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(26px,3.4vw,48px)}
+.foot-logo{background:#fff;padding:14px 18px;display:inline-block;margin-bottom:20px}
+.foot-logo img{height:34px;width:auto}
+.foot h5{font-size:.92rem;font-weight:600;color:#fff;margin:0 0 14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot a{text-decoration:none;font-size:.94rem}
+.foot a:hover{color:#fff}
+.foot p{font-size:.94rem;line-height:1.7}
+.foot-bottom{margin-top:clamp(36px,4vw,54px);padding-top:22px;border-top:1px solid var(--linie-dunkel);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;font-size:.85rem}
+
+/* ============================================================
+   BEWEGUNG
+   ============================================================ */
+.rv{opacity:0;transform:translateY(14px)}
+.rv.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv,.rv.in{opacity:1;transform:none;transition:none}
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+/* ============================================================
+   RESPONSIV
+   ============================================================ */
+@media (max-width:1080px){
+  .nav{display:none}
+  .head-tel{display:none}
+  .head .btn{display:none}
+  .burger{display:block}
+  .why-media{position:static}
+}
+@media (max-width:900px){
+  body{font-size:16px}
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-text{padding:clamp(40px,8vw,64px) var(--pad) clamp(36px,7vw,52px);max-width:none;margin:0}
+  .hero-media{aspect-ratio:4/3;position:relative}
+  .hero-media img{position:absolute}
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact{padding:22px 20px 24px}
+  .fact:nth-child(1),.fact:nth-child(3){padding-left:0}
+  .fact:nth-child(2),.fact:nth-child(4){border-right:0;padding-right:0}
+  .fact:nth-child(3),.fact:nth-child(4){border-top:1px solid var(--linie)}
+  .svc{grid-template-columns:1fr;gap:22px}
+  .svc.flip .svc-body{order:0}
+  .svc-more{grid-template-columns:1fr;gap:34px}
+  .why-grid{grid-template-columns:1fr}
+  .why-media{aspect-ratio:4/3}
+  .gal{columns:2}
+  .lead-proj .ph{aspect-ratio:16/9}
+  .steps{grid-template-columns:1fr 1fr}
+  .step{padding:26px 20px 8px}
+  .step:nth-child(1),.step:nth-child(3){padding-left:0}
+  .step:nth-child(2),.step:nth-child(4){border-right:0;padding-right:0}
+  .step:nth-child(3),.step:nth-child(4){border-top:1px solid var(--linie)}
+  .rent-top{grid-template-columns:1fr;gap:28px}
+  .rent-specs{grid-template-columns:1fr 1fr}
+  .rent-specs div{padding:20px 18px 12px}
+  .rent-specs div:nth-child(1),.rent-specs div:nth-child(3){padding-left:0}
+  .rent-specs div:nth-child(2),.rent-specs div:nth-child(4){border-right:0;padding-right:0}
+  .rent-specs div:nth-child(3),.rent-specs div:nth-child(4){border-top:1px solid var(--linie)}
+  .houses{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .gal{columns:1}
+  .lead-proj .ph{aspect-ratio:4/3}
+  .houses{grid-template-columns:1fr}
+  .form .row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-cap{max-width:100%;padding:13px 18px 12px;font-size:.82rem}
+  .hero-cap b{font-size:.9rem}
+  .btn{width:100%}
+  .hero-cta .btn,.rent-cta .btn{width:auto;flex:1 1 auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== KOPFZEILE ===================== -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Startseite Bauunternehmung Josef Geldermann und Sohn GmbH">
+      <img src="https://www.bauunternehmung-geldermann.de/images/logo_1280.png" alt="Bauunternehmung Josef Geldermann &amp; Sohn GmbH">
+      <div class="fallback" hidden>Geldermann<span>Bauunternehmung seit Josef Geldermann &amp; Sohn</span></div>
+    </a>
+
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#unternehmen">Unternehmen</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#vermietung">Vermietung Xanten</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="head-tel" href="tel:+4928657353">02865 7353</a>
+    <a class="btn sm" href="#kontakt">Bauvorhaben anfragen</a>
+
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobmenu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+</header>
+
+<div class="mob" id="mobmenu">
+  <a href="#leistungen">Leistungen</a>
+  <a href="#unternehmen">Unternehmen</a>
+  <a href="#referenzen">Referenzen</a>
+  <a href="#vermietung">Vermietung Xanten</a>
+  <a href="#kontakt">Kontakt</a>
+  <a class="btn" href="#kontakt">Bauvorhaben anfragen</a>
+  <div class="mob-meta">
+    Hörnefort 54, 46348 Raesfeld<br>
+    <a href="tel:+4928657353">02865 7353</a><br>
+    <a href="mailto:info@bauunternehmung-geldermann.de">info@bauunternehmung-geldermann.de</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-place">Raesfeld, Kreis Borken</div>
+      <h1>Wir mauern, betonieren und übergeben schlüsselfertig.</h1>
+      <p class="lede">Bauunternehmung Josef Geldermann &amp; Sohn. Über 25 eigene Mitarbeiter, eigene Maurermeister und ein eigener Maschinenpark — für Bauherren, Architekten und Investoren im Münsterland und am Niederrhein.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#kontakt">Bauvorhaben anfragen</a>
+        <a class="btn ghost" href="#referenzen">Projekte ansehen</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://www.bauunternehmung-geldermann.de/images/hd/bau_mehrfamilienhaus.jpg" alt="Schlüsselfertig erstellte Mehrfamilienhäuser der Bauunternehmung Geldermann" fetchpriority="high">
+      <div class="hero-cap">
+        <b>Josef-Steiner-Hof, Xanten</b>
+        <span>Vier Mehrfamilienhäuser mit 42 Wohneinheiten und Tiefgarage, schlüsselfertig als Generalunternehmer.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="facts-grid">
+        <div class="fact">
+          <b>Über 25 eigene Mitarbeiter</b>
+          <span>Ausgebildete Facharbeiter, mehrere Maurermeister, eigene Poliere auf der Baustelle.</span>
+        </div>
+        <div class="fact">
+          <b>Rohbau ohne Nachunternehmer</b>
+          <span>Alle Rohbauarbeiten führt die eigene Mannschaft aus — vom ersten Stein bis zur Decke.</span>
+        </div>
+        <div class="fact">
+          <b>Eigener Maschinenpark</b>
+          <span>LKW, Bagger, Radlader, LKW-Kräne und stationäre Baustellenkräne im eigenen Hof.</span>
+        </div>
+        <div class="fact">
+          <b>Zwei Standorte in Raesfeld</b>
+          <span>Verwaltung und Bauhof am Hörnefort, zweiter Standort am Ridderskamp.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LEISTUNGEN ===================== -->
+<section class="sec" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Was wir bauen.</h2>
+      <p>Vom einzelnen Einfamilienhaus bis zur Wohnanlage mit Tiefgarage, von der Gewerbehalle bis zum Ärztehaus. Als Generalunternehmer planen und bauen wir komplett — oder übernehmen genau den Bauabschnitt, der gebraucht wird.</p>
+    </div>
+
+    <div class="svc">
+      <div class="svc-media ph">
+        <img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/einfamilienhaus_schluesselfertig_1_g.jpg" alt="Schlüsselfertig erstelltes Einfamilienhaus">
+      </div>
+      <div class="svc-body">
+        <h3>Schlüsselfertigbau</h3>
+        <p>Ein Vertrag, ein Ansprechpartner, ein Übergabetermin. Die erste Vorplanung und das Angebot sind unverbindlich und kostenfrei — mit individueller Planung, grundsolider Baubeschreibung und einem Komplettangebot, in dem jede Leistung und jeder Preis steht.</p>
+        <div class="svc-tags">
+          <span class="tag">Einfamilienhäuser</span>
+          <span class="tag">Individuelle Planung</span>
+          <span class="tag">Generalunternehmer</span>
+          <span class="tag">Festes Ausbauteam</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc flip">
+      <div class="svc-media ph">
+        <img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/mehrfamilienhaus-15-g.jpg" alt="Mehrfamilienhäuser mit Tiefgarage im Wohnungsbau">
+      </div>
+      <div class="svc-body">
+        <h3>Wohnungs- und Mietwohnungsbau</h3>
+        <p>Mehrfamilienhäuser, Wohnanlagen, Tiefgaragen mit PKW-Aufzug. Zuletzt vier Häuser mit 42 Wohneinheiten in Xanten, 39 Wohnungen mit Tiefgarage in Borken und 21 seniorengerechte Wohnungen in Raesfeld-Erle — jeweils schlüsselfertig als Generalunternehmer.</p>
+        <div class="svc-tags">
+          <span class="tag">Mehrfamilienhäuser</span>
+          <span class="tag">Tiefgaragen</span>
+          <span class="tag">Seniorengerechtes Bauen</span>
+          <span class="tag">Geförderter Wohnungsbau</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div class="svc-media ph">
+        <img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/referenz_aldi_hd.jpg" alt="Neubau eines Aldi-Marktes in Raesfeld">
+      </div>
+      <div class="svc-body">
+        <h3>Gewerbe-, Industrie- und öffentlicher Bau</h3>
+        <p>Gewerbehallen, Büro- und Ausstellungsgebäude, Ärztehäuser, Seniorenresidenzen, Tagespflege. Für Erd-, Maurer- und insbesondere Betonarbeiten sind wir personell wie maschinell ausgerüstet und führen sie selbst aus.</p>
+        <div class="svc-tags">
+          <span class="tag">Stahlbeton- und Massivbau</span>
+          <span class="tag">Hallenbau</span>
+          <span class="tag">Ärztehäuser</span>
+          <span class="tag">Pflege und Betreutes Wohnen</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-more">
+      <div class="svc-mini">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/hd/planung.jpg" alt="Planung und Bauleitung"></div>
+        <h4>Umbau, Sanierung, Renovierung</h4>
+        <p>Im Bestand entscheidet Erfahrung. Unser Stammpersonal weiß, was hinter einer Wand auftauchen kann — und was das für Termin und Preis bedeutet.</p>
+      </div>
+      <div class="svc-mini">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/hd/bauunternehmung_08.jpg" alt="Landwirtschaftliches Bauen, Hallenbau"></div>
+        <h4>Landwirtschaftliches Bauen</h4>
+        <p>Ställe, Hallen und Lager für landwirtschaftliche Betriebe. Unsere Leute suchen das Gespräch mit dem Landwirt und bringen Erfahrung aus realisierten Höfen mit.</p>
+      </div>
+      <div class="svc-mini">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/hd/bauunternehmung_04.jpg" alt="Erdarbeiten mit eigenem Maschinenpark"></div>
+        <h4>Abbruch, Erd- und Siebarbeiten</h4>
+        <p>Eigene Maschinen, eigene Maschinenführer. Vom Rückbau über den Aushub bis zum baureifen Grundstück — ohne fremde Kapazitäten einzukaufen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WARUM / UNTERNEHMEN ===================== -->
+<section class="sec sec-dark" id="unternehmen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Was uns von einem Bauträger unterscheidet.</h2>
+      <p>Geführt von Josef und David Geldermann. Der Name des Unternehmens steht seit jeher für eine einfache Regel: Wer auf der Baustelle steht, gehört zum Betrieb.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-media ph">
+        <img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/hd/unternehmen/geldermann-bauunternehmen_01.jpg" alt="Maschinenpark der Bauunternehmung Geldermann in Raesfeld">
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <h3>Der Rohbau kommt nicht vom Subunternehmer</h3>
+          <p>Alle Rohbauarbeiten führen unsere eigenen Mitarbeiter aus: gut ausgebildete Facharbeiter und mehrere Maurermeister, die auch als Poliere die Baustellen leiten. Sie kennen unsere Qualitätsansprüche, weil sie sie selbst gesetzt haben.</p>
+        </div>
+        <div class="why-item">
+          <h3>Ausbaupartner seit über 20 Jahren</h3>
+          <p>Unser Handwerkerteam für Nachfolgearbeiten und Ausbaugewerke kommt ausschließlich aus der Region und begleitet uns seit mehr als zwei Jahrzehnten. Kein neues Gewerk auf jeder Baustelle, keine Einarbeitung, keine Überraschungen.</p>
+        </div>
+        <div class="why-item">
+          <h3>Maschinen im eigenen Hof</h3>
+          <p>LKW, Bagger, Radlader, LKW-Kräne und stationäre Baustellenkräne gehören uns. Wir müssen nicht auf freie Kapazitäten warten und können anfallende Arbeiten selbst ausführen, statt sie weiterzureichen.</p>
+        </div>
+        <div class="why-item">
+          <h3>Ein Angebot, in dem alle Kosten stehen</h3>
+          <p>Beim Schlüsselfertigbau ist es für uns selbstverständlich: Vorplanung und Angebot sind unverbindlich und kostenfrei, das Angebot ist ein Komplettangebot mit allen Leistungen und Kosten, und es enthält eine individuelle Planung samt Baubeschreibung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATEMENT ===================== -->
+<section class="statement">
+  <img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/hd/bauunternehmen_01.jpg" alt="Rohbau eines Mehrfamilienhauses mit Tiefgarage">
+  <div class="wrap">
+    <blockquote>Ein Rohbau verzeiht nichts. Deshalb machen wir ihn selbst.</blockquote>
+    <cite>39 Wohnungen mit Tiefgarage, schlüsselfertig als Generalunternehmer in Borken.</cite>
+  </div>
+</section>
+
+<!-- ===================== REFERENZEN ===================== -->
+<section class="sec" id="referenzen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Gebaut in Raesfeld, Borken, Xanten und Umgebung.</h2>
+      <p>Ein Auszug aus abgeschlossenen und laufenden Projekten. Für Details, Bauzeiten und Ansprechpartner sprechen Sie uns gerne an.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Projekte filtern">
+      <button class="filter" data-f="all" aria-pressed="true">Alle Projekte</button>
+      <button class="filter" data-f="wohnen" aria-pressed="false">Wohnungsbau</button>
+      <button class="filter" data-f="gewerbe" aria-pressed="false">Gewerbe &amp; Öffentlich</button>
+      <button class="filter" data-f="aktuell" aria-pressed="false">Aktuelle Baustellen</button>
+    </div>
+
+    <figure class="lead-proj" data-big="https://www.bauunternehmung-geldermann.de/images/bauprojekte_aktuell/xanten_josef-steiner-str_01.jpg" tabindex="0">
+      <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/bauprojekte_aktuell/xanten_josef-steiner-str_01.jpg" alt="Bauprojekt Josef-Steiner-Straße in Xanten"></div>
+      <figcaption><b>Josef-Steiner-Straße, Xanten</b><span>Vier Mehrfamilienhäuser schlüsselfertig, 42 Wohneinheiten mit Tiefgarage</span></figcaption>
+    </figure>
+
+    <div class="gal" id="gal">
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/geschaeftshaeuser/aerztehaus_1_g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/geschaeftshaeuser/aerztehaus_1_g.jpg" alt="Neubau eines Ärztehauses in Raesfeld"></div>
+        <figcaption><b>Ärztehaus, Raesfeld</b><span>Neubau</span></figcaption>
+      </figure>
+
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/referenz_aldi_1g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/referenz_aldi_1g.jpg" alt="Neubau Aldi-Markt in Raesfeld"></div>
+        <figcaption><b>Aldi-Markt, Raesfeld</b><span>Neubau</span></figcaption>
+      </figure>
+
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-tagespflege-erle-hd.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-tagespflege-erle-hd.jpg" alt="Gebäudekomplex für Tagespflege und betreutes Wohnen in Raesfeld-Erle"></div>
+        <figcaption><b>Tagespflege &amp; betreutes Wohnen, Raesfeld-Erle</b><span>Gebäudekomplex, schlüsselfertig</span></figcaption>
+      </figure>
+
+      <figure data-c="wohnen" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/mehrfamilienhaus-xanten_03_g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/mehrfamilienhaus-xanten_03_g.jpg" alt="Mehrfamilienhaus in Xanten, schlüsselfertig erstellt"></div>
+        <figcaption><b>Mehrfamilienhaus, Xanten</b><span>15 Wohneinheiten, Tiefgarage mit PKW-Aufzug</span></figcaption>
+      </figure>
+
+      <figure data-c="wohnen" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/bauen_schluesselfertig_individuell_1_g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/bauen_schluesselfertig_individuell_1_g.jpg" alt="Individuelles Einfamilienhaus, schlüsselfertig erstellt"></div>
+        <figcaption><b>Individuelles Einfamilienhaus</b><span>Schlüsselfertig</span></figcaption>
+      </figure>
+
+      <figure data-c="wohnen" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/mehrfamilienhaus-12-g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/schluesselfertig_neubau/mehrfamilienhaus-12-g.jpg" alt="Mehrfamilienhäuser mit Tiefgarage"></div>
+        <figcaption><b>Sechs Mehrfamilienhäuser</b><span>39 Wohneinheiten, Tiefgarage mit 28 Stellplätzen</span></figcaption>
+      </figure>
+
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-gewerbebetrieb_01_g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-gewerbebetrieb_01_g.jpg" alt="Neubau Büro- und Gewerbehalle Stenert GmbH in Raesfeld"></div>
+        <figcaption><b>Stenert GmbH, Raesfeld</b><span>Neubau Büro- und Gewerbehalle</span></figcaption>
+      </figure>
+
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/geschaeftshaeuser/seniorenresidenz_1-g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/geschaeftshaeuser/seniorenresidenz_1-g.jpg" alt="Neubau einer Seniorenresidenz in Raesfeld"></div>
+        <figcaption><b>Seniorenresidenz, Raesfeld</b><span>Neubau</span></figcaption>
+      </figure>
+
+      <figure data-c="wohnen" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/wohnhaeuser/einfamilienhaus-1-g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/wohnhaeuser/einfamilienhaus-1-g.jpg" alt="Neubau eines Einfamilienhauses"></div>
+        <figcaption><b>Einfamilienhaus</b><span>Neubau</span></figcaption>
+      </figure>
+
+      <figure data-c="gewerbe" data-big="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-gewerbebetrieb_05_g.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/referenzen/gewerbebau/neubau-gewerbebetrieb_05_g.jpg" alt="Büro- und Ausstellungsgebäude FTW Kreierhoff GmbH in Raesfeld"></div>
+        <figcaption><b>FTW Kreierhoff GmbH, Raesfeld</b><span>Büro- und Ausstellungsgebäude</span></figcaption>
+      </figure>
+
+      <figure data-c="aktuell" data-big="https://www.bauunternehmung-geldermann.de/images/bauprojekte_aktuell/bocholt_umbau_neubau.jpg" tabindex="0">
+        <div class="ph"><img loading="lazy" src="https://www.bauunternehmung-geldermann.de/images/bauprojekte_aktuell/bocholt_umbau_neubau.jpg" alt="Umbau und Neubau in Bocholt"></div>
+        <figcaption><b>Bocholt</b><span>Umbau und Neubau, laufendes Projekt</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABLAUF ===================== -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv" style="max-width:560px">
+      <h2>So läuft ein Bauvorhaben bei uns.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">Schritt 1</span>
+        <h3>Anfrage und Ortstermin</h3>
+        <p>Sie schildern das Vorhaben, wir schauen uns Grundstück oder Bestand an und klären, was realistisch ist.</p>
+      </div>
+      <div class="step">
+        <span class="num">Schritt 2</span>
+        <h3>Vorplanung und Komplettangebot</h3>
+        <p>Individuelle Planung, Baubeschreibung und ein Angebot mit allen Leistungen und Kosten — unverbindlich und kostenfrei.</p>
+      </div>
+      <div class="step">
+        <span class="num">Schritt 3</span>
+        <h3>Rohbau mit eigener Mannschaft</h3>
+        <p>Erd-, Maurer- und Betonarbeiten durch unsere Facharbeiter, geleitet von einem Polier aus dem Stammpersonal.</p>
+      </div>
+      <div class="step">
+        <span class="num">Schritt 4</span>
+        <h3>Ausbau und Übergabe</h3>
+        <p>Die Ausbaugewerke kommen aus der Region und arbeiten seit Jahren mit uns. Am Ende steht ein Termin, kein Zwischenstand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VERMIETUNG ===================== -->
+<section class="sec rent" id="vermietung">
+  <div class="wrap">
+    <div class="rent-top">
+      <div>
+        <div class="rent-badge">
+          <img src="https://www.m-u-g-verwaltung.de/images/logo/logo_m-u-g.png" alt="Xanten M &amp; G Verwaltung GbR">
+          <span>Vermietung durch Xanten M &amp; G Verwaltung GbR</span>
+        </div>
+        <h2>Mietwohnungen im Josef-Steiner-Hof, Xanten.</h2>
+        <p class="lede">Was wir bauen, verwalten wir zum Teil auch selbst. Vor den Toren der historischen Altstadt und fußläufig zum Kurpark ist eine Wohnanlage aus vier Mehrfamilienhäusern entstanden — mit Tiefgarage, Personenaufzug und einem gemeinsamen Innenhof mit Spielplatz.</p>
+      </div>
+      <div class="rent-media ph">
+        <img loading="lazy" src="https://www.m-u-g-verwaltung.de/images/home/luftaufnahme_baustelle.jpg" alt="Luftaufnahme der Wohnanlage Josef-Steiner-Straße in Xanten">
+      </div>
+    </div>
+
+    <div class="rent-specs">
+      <div>
+        <b>42</b>
+        <span>barrierearme Mietwohnungen in vier Häusern</span>
+      </div>
+      <div>
+        <b>46–86 m²</b>
+        <span>Wohnungsgrößen, von der Einzelwohnung bis zur Familienwohnung</span>
+      </div>
+      <div>
+        <b>29 + 17</b>
+        <span>mietbare Stellplätze in der Tiefgarage und vor Haus 4</span>
+      </div>
+      <div>
+        <b>Innenhof</b>
+        <span>gemeinsam gestaltet, mit Spielplatz und Sitzmöglichkeiten</span>
+      </div>
+    </div>
+
+    <div class="houses">
+      <div class="house">
+        <h4>Haus 1</h4>
+        <div class="addr">Johannes-Janssen-Str. 11</div>
+        <div class="units">5<small>Wohneinheiten</small></div>
+        <div class="status">Geförderte Wohnungen — Wohnberechtigungsschein erforderlich</div>
+      </div>
+      <div class="house">
+        <h4>Haus 2</h4>
+        <div class="addr">Johannes-Janssen-Str. 10b</div>
+        <div class="units">8<small>Wohneinheiten</small></div>
+        <div class="status free">Frei vermietbar — ohne Wohnberechtigungsschein</div>
+      </div>
+      <div class="house">
+        <h4>Haus 3a und 3b</h4>
+        <div class="addr">Johannes-Janssen-Str. 15a / 15b</div>
+        <div class="units">13<small>Wohneinheiten</small></div>
+        <div class="status">Geförderte Wohnungen — Wohnberechtigungsschein erforderlich</div>
+      </div>
+      <div class="house">
+        <h4>Haus 4a und 4b</h4>
+        <div class="addr">Johannes-Janssen-Str. 13a / 13b</div>
+        <div class="units">16<small>Wohneinheiten</small></div>
+        <div class="status">Geförderte Wohnungen — Wohnberechtigungsschein erforderlich</div>
+      </div>
+    </div>
+
+    <div class="rent-cta">
+      <p>Grundrisse, Lageplan und aktuelle Verfügbarkeiten erhalten Sie direkt von der Verwaltung: <b>02865 9099908</b></p>
+      <a class="btn" href="#kontakt" data-prefill="miete">Mietwohnung anfragen</a>
+      <a class="btn ghost" href="tel:+4928659099908">02865 9099908</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KONTAKT ===================== -->
+<section class="sec sec-dark" id="kontakt">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Lassen Sie uns über Ihr Bauvorhaben sprechen.</h2>
+        <p class="lede">Erste Vorplanung und Angebot sind unverbindlich und kostenfrei. Erzählen Sie uns kurz, worum es geht — wir melden uns.</p>
+
+        <div class="locs">
+          <div class="loc">
+            <b>Verwaltung und Standort Hörnefort</b>
+            <p>
+              Hörnefort 54, 46348 Raesfeld<br>
+              Telefon <a href="tel:+4928657353">02865 7353</a> · Fax 02865 1409<br>
+              <a href="mailto:info@bauunternehmung-geldermann.de">info@bauunternehmung-geldermann.de</a>
+            </p>
+          </div>
+          <div class="loc">
+            <b>Standort Ridderskamp</b>
+            <p>Ridderskamp 3, 46348 Raesfeld</p>
+          </div>
+          <div class="loc">
+            <b>Vermietung Xanten M &amp; G Verwaltung GbR</b>
+            <p>
+              Hörnefort 54, 46348 Raesfeld<br>
+              Telefon <a href="tel:+4928659099908">02865 9099908</a><br>
+              <a href="mailto:verwaltung@bauunternehmung-geldermann.de">verwaltung@bauunternehmung-geldermann.de</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <form class="form" id="anfrage" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-ort">Ort des Bauvorhabens</label>
+            <input id="f-ort" name="ort" type="text">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="f-mail">E-Mail</label>
+            <input id="f-mail" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefon</label>
+            <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-art">Worum geht es?</label>
+          <select id="f-art" name="art">
+            <option>Schlüsselfertiges Bauen</option>
+            <option>Wohnungs- oder Mietwohnungsbau</option>
+            <option>Gewerbe-, Industrie- oder öffentlicher Bau</option>
+            <option>Umbau, Sanierung, Renovierung</option>
+            <option>Landwirtschaftliches Bauen</option>
+            <option>Abbruch-, Erd- oder Siebarbeiten</option>
+            <option value="miete">Mietwohnung in Xanten</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-text">Ihr Vorhaben</label>
+          <textarea id="f-text" name="nachricht" placeholder="Grundstück, Bestand, gewünschter Zeitraum, Besonderheiten …"></textarea>
+        </div>
+        <button class="btn light" type="submit" style="width:100%">Anfrage senden</button>
+        <p class="fine">Demo-Formular — in der fertigen Website landet die Anfrage direkt in Ihrem Postfach.</p>
+        <p class="form-note" id="formnote">Vielen Dank. In der fertigen Website ginge diese Anfrage jetzt an info@bauunternehmung-geldermann.de.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FUSSZEILE ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">
+          <img src="https://www.bauunternehmung-geldermann.de/images/logo_1280.png" alt="Bauunternehmung Josef Geldermann &amp; Sohn GmbH">
+        </div>
+        <p>
+          Bauunternehmung Josef<br>Geldermann &amp; Sohn GmbH<br>
+          Hörnefort 54, 46348 Raesfeld
+        </p>
+      </div>
+      <div>
+        <h5>Leistungen</h5>
+        <ul>
+          <li><a href="#leistungen">Schlüsselfertigbau</a></li>
+          <li><a href="#leistungen">Wohnungs- und Mietwohnungsbau</a></li>
+          <li><a href="#leistungen">Gewerbe- und Industriebau</a></li>
+          <li><a href="#leistungen">Umbau und Sanierung</a></li>
+          <li><a href="#leistungen">Abbruch- und Erdarbeiten</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Unternehmen</h5>
+        <ul>
+          <li><a href="#unternehmen">Über uns</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#vermietung">Vermietung Xanten</a></li>
+          <li><a href="#kontakt">Kontakt und Anfahrt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="tel:+4928657353">02865 7353</a></li>
+          <li><a href="mailto:info@bauunternehmung-geldermann.de">info@bauunternehmung-geldermann.de</a></li>
+          <li><a href="tel:+4928659099908">Vermietung 02865 9099908</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="jahr">2026</span> Bauunternehmung Josef Geldermann &amp; Sohn GmbH</span>
+      <span><a href="#" style="text-decoration:none">Impressum</a> &nbsp;·&nbsp; <a href="#" style="text-decoration:none">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Projektbild">
+  <button class="lb-x" id="lbx" aria-label="Schließen">×</button>
+  <img id="lbimg" src="" alt="">
+  <div class="lb-cap" id="lbcap"></div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"GeneralContractor",
+  "name":"Bauunternehmung Josef Geldermann & Sohn GmbH",
+  "url":"https://www.bauunternehmung-geldermann.de/",
+  "telephone":"+49 2865 7353",
+  "faxNumber":"+49 2865 1409",
+  "email":"info@bauunternehmung-geldermann.de",
+  "address":{"@type":"PostalAddress","streetAddress":"Hörnefort 54","postalCode":"46348","addressLocality":"Raesfeld","addressRegion":"Nordrhein-Westfalen","addressCountry":"DE"},
+  "areaServed":["Raesfeld","Borken","Xanten","Bocholt","Kreis Borken"],
+  "knowsAbout":["Schlüsselfertigbau","Wohnungsbau","Mietwohnungsbau","Gewerbebau","Industriebau","Stahlbetonbau","Massivbau","Bausanierung","Umbau","Landwirtschaftliches Bauen","Abbrucharbeiten","Erdarbeiten"]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Jahr */
+  document.getElementById('jahr').textContent = new Date().getFullYear();
+
+  /* Feste Seitenverhältnisse an die echten Bildmaße anpassen,
+     damit nichts hart beschnitten oder verzerrt wird. */
+  function adapt(img, min, max){
+    var host = img.closest('.ph');
+    if(!host) return;
+    var w = img.naturalWidth, h = img.naturalHeight;
+    if(!w || !h) return;
+    var r = w / h;
+    host.style.aspectRatio = Math.min(max, Math.max(min, r)).toFixed(4);
+  }
+  function watch(sel, min, max){
+    document.querySelectorAll(sel).forEach(function(img){
+      if(img.complete && img.naturalWidth) adapt(img, min, max);
+      else img.addEventListener('load', function(){ adapt(img, min, max); });
+    });
+  }
+  watch('.svc-media img', 1.1, 1.8);
+  watch('.svc-mini .ph img', 1.2, 1.9);
+  watch('.why-media img', 0.8, 1.5);
+  watch('.rent-media img', 1.1, 1.7);
+  watch('.lead-proj img', 1.7, 2.6);
+
+  /* Bild-Ausfallsicherung */
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      img.classList.add('failed');
+      var brand = img.closest('.brand');
+      if(brand){ var f = brand.querySelector('.fallback'); if(f){ f.hidden = false; } img.style.display='none'; }
+      var fl = img.closest('.foot-logo'); if(fl){ fl.style.display='none'; }
+      var rb = img.closest('.rent-badge'); if(rb){ img.style.display='none'; }
+    });
+    if(img.complete && img.naturalWidth === 0){ img.dispatchEvent(new Event('error')); }
+  });
+
+  /* Mobile Navigation */
+  var burger = document.getElementById('burger');
+  var mob = document.getElementById('mobmenu');
+  function closeMenu(){
+    document.body.classList.remove('menu-open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Menü öffnen');
+    document.body.style.overflow='';
+  }
+  burger.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mob.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  /* Sanftes Einblenden der Abschnittsköpfe */
+  var rv = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -12% 0px', threshold:0.1});
+    rv.forEach(function(el){ io.observe(el); });
+  } else {
+    rv.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Referenzfilter */
+  var filters = document.querySelectorAll('.filter');
+  var figures = document.querySelectorAll('#gal figure');
+  var lightboxable = document.querySelectorAll('#gal figure, .lead-proj');
+  filters.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = btn.dataset.f;
+      filters.forEach(function(b){ b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      figures.forEach(function(fig){
+        fig.hidden = !(f === 'all' || fig.dataset.c === f);
+      });
+    });
+  });
+
+  /* Lightbox */
+  var lb = document.getElementById('lb');
+  var lbimg = document.getElementById('lbimg');
+  var lbcap = document.getElementById('lbcap');
+  var lbx = document.getElementById('lbx');
+  var lastFocus = null;
+
+  function openLb(fig){
+    var img = fig.querySelector('img');
+    if(!img || img.classList.contains('failed')) return;
+    lastFocus = fig;
+    lbimg.src = fig.dataset.big || img.src;
+    lbimg.alt = img.alt || '';
+    var cap = fig.querySelector('figcaption');
+    lbcap.textContent = cap ? cap.textContent.replace(/\s+/g,' ').trim() : '';
+    lb.classList.add('on');
+    document.body.style.overflow = 'hidden';
+    lbx.focus();
+  }
+  function closeLb(){
+    lb.classList.remove('on');
+    lbimg.src = '';
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  lightboxable.forEach(function(fig){
+    fig.addEventListener('click', function(){ openLb(fig); });
+    fig.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openLb(fig); }
+    });
+  });
+  lbx.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ if(lb.classList.contains('on')) closeLb(); if(document.body.classList.contains('menu-open')) closeMenu(); }
+  });
+
+  /* Vorauswahl im Formular über den Vermietungs-Button */
+  document.querySelectorAll('[data-prefill]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var sel = document.getElementById('f-art');
+      var val = a.dataset.prefill;
+      Array.prototype.forEach.call(sel.options, function(o){
+        if(o.value === val){ sel.value = o.value; }
+      });
+    });
+  });
+
+  /* Demo-Formular */
+  document.getElementById('anfrage').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('formnote').classList.add('on');
+  });
+})();
+</script>
+</body>
+</html>
